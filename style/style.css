@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Inter";
+}
+
+.slider {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(to left, #ba7453, #d1a984);
+   z-index: -1;
+}
+
+nav {
+   display: grid;
+   align-items: center;
+   grid-template-columns: 10% 1fr 1fr 10%;
+   min-height: 8vh;
+   color: #ffffff;
+}
+
+#logo {
+   grid-column: 2/3;
+   font-size: 22px;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+.burger {
+   justify-self: end;
+}
+
+.burger img {
+   grid-column: 1;
+   cursor: pointer;
+   height: 3vh;
+   justify-self: end;
+}
+
+section {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 80vh;
+}
+
+.hero {
+   width: 100%;
+   height: 80vh;
+   position: relative;
+}
+
+.hero img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.hero::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #001100;
+   opacity: .3;
+}
+
+.headline {
+   position: absolute;
+   top: 80%;
+   left: 10%;
+   font-size: 50px;
+   text-transform: capitalize;
+   color: #ffffff;
+   transform: translate(-20%, -70%);
+   z-index: 1;
+}
